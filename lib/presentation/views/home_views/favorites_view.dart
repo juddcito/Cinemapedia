@@ -43,6 +43,23 @@ class _FavoritesViewState extends ConsumerState<FavoritesView> {
     // convertir los valores a un List
     final favoriteMovies = ref.watch(favoriteMoviesProvider).values.toList();
 
+    if (favoriteMovies.isEmpty){
+      final colors = Theme.of(context).colorScheme;
+      return const Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            
+            Icon(Icons.favorite_outline, size: 60,),
+            Text('Ohhh no!!', style: TextStyle(fontSize: 30),),
+            Text('No tienes películas favoritas', style: TextStyle(fontSize: 20, color: Colors.black45),)
+
+          ],
+        ),
+      );
+    }
+
     return Scaffold( 
       body: MovieMasonry(
         loadNextPage: loadNextPage,

@@ -1,4 +1,4 @@
-# Cinemapedia 🏪
+# Cinemapedia 🎞️
 Aplicación móvil hecha en Flutter para buscar y consultar películas desde la API de TheMovieDB, usando Riverpod como manejador de estado y la librería Dio para los métodos HTTP.
 
 # Vista previa 👀
